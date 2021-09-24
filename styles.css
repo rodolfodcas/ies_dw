@@ -1,4 +1,118 @@
 ﻿body 
 {
-    background-color: #ff0000;
+    background-color: #d5cece;
+}
+
+a 
+{
+    color: #d5cece;
+}
+
+a:link, a:visited
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:active, a:hover {
+    background-color: #808080;
+}
+
+#ejemplo:link, #ejemplo:active{
+    color: #000000;
+}
+
+#ejemplo:hover {
+    background-color: #ffffff;
+}
+
+#links:link, links:active{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*Images*/
+header {
+    padding: 5px;
+    display: grid;
+    place-content: center;
+}
+
+#http {
+    width: 600px;
+    height: 300px;
+}
+
+#http1 {
+    width: 300px;
+    height: 300px;
+}
+
+#http2 {
+    width: 500px;
+    height: 250px;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+
+#barra{
+    margin-bottom: 5px;
+    background-color: #000000;
+    height: 5px;
+    width: 100%;
+}
+
+
+/**/
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*DESIGN PAGE*/
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin-top: 10px;
+}
+
+.grid6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*TEXTO*/
+#texto1 {
+    display: flex;
+    text-align: justify;
+}
+
+/*MOBILE SUPPORT*/
+@media (max-width: 600px) {
+    body {
+        background-color: #ffffff;
+    }
+
+/*Images*/
+    #http {
+        width: 270px;
+        height: 150px;
+    }
+
+    #http2 {
+        width: 250px;
+        height: 125px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-row-gap: 20px;
+    }
 }

@@ -1,34 +1,188 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
 
+    <!--MOBILE SUPPORT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--CSS-->
-    <link rel="stylesheet" href="styles.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!--FONTS-->
 
 
     <!--ICONS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <title>PROTOCOLO HTTP</title>
 </head>
 
-<body lang="es-mx">
+<body>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="#" title="Inicio">Inicio</a>
-            </li>
-            <li>
-                <a href="#" title="Integrantes">Integrantes</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand" href="#">HTTP</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio
+                            <span class="material-icons">home</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Integrantes &nbsp;<span class="material-icons">groups</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item" style="color: #000000;">Rodolfo Dominguez Castillo</li>
+                            <hr />
+                            <li class="dropdown-item" style="color: #000000;">Jose Martin Reyna Nuñez</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+    <header>
+        <img id="http" src="images/phttp.jpg" />
+    </header>
+
+    <section id="barra"></section>
+    
+    <main class="grid container">
+        <div id="grid-item">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-ligth" style="width: 280px;">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="links" href="#thttp">FUNCIONAMIENTO Y ESTRUCTURA</a>
+                    </li>
+                    <hr />
+                    <li class="nav-item">
+                        <a class="nav-link" id="links" href="#peticiones">PETICIONES O REQUESTS METHODS</a>
+                    </li>
+                    <hr />
+                    <li class="nav-item">
+                        <a class="nav-link" id="links" href="#tcodigos">CODIGOS DE ESTADO</a>
+                    </li>
+                    <hr />
+                    <li class="nav-item">
+                        <a class="nav-link" id="links" href="#tcodificacion">CODIFICACION DEL CONTENIDO</a>
+                    </li>
+                    <hr />
+                    <li class="nav-item">
+                        <a class="nav-link" id="links" href="#trealizacion">REALIZACION DE PETICIONES</a>
+                    </li>
+                    <hr />
+                </ul>
+            </div>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="thttp" style="width: 100%;">
+                    <span style="width: 10px;">HTTP</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        De sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un protocolo el cual nos permite realizar una
+                        petición de datos y recursos, como pueden ser documentos HTML . Es la base de cualquier intercambio de datos en la Web, y un protocolo
+                        de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el
+                        elemento que se encuentra con los datos (el cliente), normalmente un navegador Web. Así, una página web completa resultante de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que
+                        especifica el estilo de maquetación de la página web ( CSS ), el texto, las imágenes, vídeos, scripts.
+                    </p><br />
+                </div>
+                <img id="http1" src="images/http2.png" />
+            </section>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="tfuncionamiento" style="width: 100%;">
+                    <span style="width: 10px;">FUNCIONAMIENTO Y ESTRUCTURA</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        Necesitaremos un cliente que sera el encargado de efectuar la peticion, Este cliente puede ser un navegador web o un spider.
+                        La información transmitida se identifica mediante una URL o localizador uniforme de recursos y pueden ser archivos, resultados de consultas de bases de datos o la traduccion automatica de un documento
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="tpeticiones" style="width: 100%;">
+                    <span style="width: 10px;">PETICIONES O REQUESTS METHODS</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        Cuando hablamos de la descripción de peticiones o request methods, nos referimos a los diferentes métodos de petición que HTTP nos proporciona estos  8: <b>HEAD, GET, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT</b>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="tcodigos" style="width: 100%;">
+                    <span style="width: 10px;">CODIGOS DE ESTADO</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:<br />
+                        <b>
+                            Respuestas informativas (100–199) <br />
+                            Respuestas satisfactorias (200–299) <br />
+                            Redirecciones (300–399) <br />
+                            Errores de los clientes (400–499) <br />
+                            y errores de los servidores (500–599).
+                        </b>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="tcodificacion" style="width: 100%;">
+                    <span style="width: 10px;">CODIFICACION DEL CONTENIDO</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        Cuando hablamos de codificación de contenido nos referimos de tres cabeceras concretas e implicadas con la codificación.<br />
+                        <b>
+                            ACCEPT ENCODING <br />
+                            CONTENT-ENCONDIG<br />
+                            TRANSFER ENCODING
+                        </b>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="grid-item">
+            <section class="card">
+                <div class="card-header" id="trealizacion" style="width: 100%;">
+                    <span style="width: 10px;">REALIZACION DE PETICIONES</span>
+                </div>
+                <div class="card-body" id="texto1">
+                    <p>
+                        Para poder ver las peticiones realizadas en un servidor proxy tendremos que usar un log asociado en este ejemplo se utilizo squid y su fichero asociado acces.log
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="grid-item" class="grid6">
+            <img id="http2" src="images/servicios-web.jpg" />
+        </div>
+    </main>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+            <p class="text-center text-dark">&copy; 2021 IES</p>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
