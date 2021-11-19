@@ -1,0 +1,75 @@
+﻿@using App.DTO;
+@model List<UserDTO>
+@{
+    ViewData["Title"] = "Administrar Usuarios";
+}
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-6 main-header">
+                <h2>Lista<span>de usuarios</span></h2>
+            </div>
+            <div class="col-lg-6 breadcrumb-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="pe-7s-home"></i></a></li>
+                    <li class="breadcrumb-item">Usuarios</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p style="text-align:right;margin:20px;">
+    <a class="btn btn-outline-primary" asp-action="AddOrEdit">Nuevo Usuario</a>
+</p>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <label>Id</label>
+                </th>
+                <th>
+                    <label>Correo Electrónico</label>
+                </th>
+                <th>
+                    <label>Name</label>
+                </th>
+                <th></th>
+                <th>Editar</th>
+                <th>Detalle</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Email)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.NickName)
+                    </td>
+                    <td></td>
+                    <td class="text-center">
+                        <a asp-action="AddOrEdit" class="btn btn-outline-primary" asp-route-Id="@item.Id">Editar</a>
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Detail" class="btn btn-outline-info" asp-route-Id="@item.Id">Detalle</a>
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-Id="@item.Id">Borrar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

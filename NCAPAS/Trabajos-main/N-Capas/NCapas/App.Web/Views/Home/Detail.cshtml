@@ -1,0 +1,56 @@
+﻿@using App.DTO;
+@model UserDTO
+@{
+    ViewData["Title"] = "Detalle Usuario";
+}
+<h1>Detalle Usuario</h1>
+<div class="container">
+    <dl class="row">
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.NickName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt class="col-md-6">
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+    </dl>
+
+    <div>
+        <a class="btn btn-primary" asp-action="AddOrEdit" asp-route-Id="@Model.Id">Editar</a>
+        <a class="btn btn-danger" asp-action="Index">Regresar</a>
+    </div>
+
+</div>

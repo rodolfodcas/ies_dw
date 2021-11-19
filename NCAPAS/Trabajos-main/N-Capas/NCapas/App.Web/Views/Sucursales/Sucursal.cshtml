@@ -1,0 +1,97 @@
+﻿@using App.DTO;
+@model List<BODTO>
+@{
+    ViewData["Title"] = "Administrar Sucursales";
+}
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-6 main-header">
+                <h2>Lista<span>de Sucursales</span></h2>
+            </div>
+            <div class="col-lg-6 breadcrumb-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Sucursal.html"><i class="pe-7s-home"></i></a></li>
+                    <li class="breadcrumb-item">Sucursales</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p style="text-align:right;margin:20px;">
+    <a class="btn btn-outline-primary" asp-action="AddOrEditBO">Nueva Sucursal</a>
+</p>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <label>Id</label>
+                </th>
+                <th>
+                    <label>Name</label>
+                </th>
+                <th>
+                    <label>Adress</label>
+                </th>
+                <th>
+                    <label>City</label>
+                </th>
+                <th>
+                    <label>State</label>
+                </th>
+                <th>
+                    <label>Country</label>
+                </th>
+                <th>
+                    <label>ZIP</label>
+                </th>
+                <th></th>
+                <th>Editar</th>
+                <th>Detalle</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.ZIP)
+                </td>
+                <td></td>
+                <td class="text-xl-right">
+                    <a asp-action="AddOrEditBO" class="btn btn-outline-primary" asp-route-Id="@item.Id">Editar</a>
+                </td>
+                <td class="text-xl-right">
+                    <a asp-action="DetailBO" class="btn btn-outline-info" asp-route-Id="@item.Id">Detalle</a>
+                </td>
+                <td class="text-xl-right">
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-Id="@item.Id">Borrar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

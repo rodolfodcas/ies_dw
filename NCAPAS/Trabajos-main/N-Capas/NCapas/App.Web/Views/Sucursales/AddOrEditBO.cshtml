@@ -1,0 +1,66 @@
+﻿@using App.DTO;
+@model BODTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Formuario Sucursal";
+}
+
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-6 main-header">
+                <h2>Registrar<span>Sucursal</span></h2>
+            </div>
+            <div class="col-lg-6 breadcrumb-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Sucursal.html"><i class="pe-7s-home"></i></a></li>
+                    <li class="breadcrumb-item">Sucursal</li>
+                    <li class="breadcrumb-item">Form</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="needs-validation" novalidate="" asp-action="AddOrEditBO">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group">
+                    <label asp-for="Name" class=""></label>
+                    <input asp-for="Name" class="form-control" required="" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address" class=""></label>
+                    <input asp-for="Address" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class=""></label>
+                    <input asp-for="City" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class=""></label>
+                    <input asp-for="State" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Country" class=""></label>
+                    <input asp-for="Country" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZIP" class=""></label>
+                    <input asp-for="ZIP" class="form-control" required="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Guardar" />
+                    <a class="btn btn-info" asp-action="Sucursal">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

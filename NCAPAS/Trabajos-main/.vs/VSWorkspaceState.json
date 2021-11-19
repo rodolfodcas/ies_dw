@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\N-Capas",
+    "\\N-Capas\\NCapas",
+    "\\N-Capas\\NCapas\\App.Web",
+    "\\N-Capas\\NCapas\\App.Web\\Controllers",
+    "\\N-Capas\\NCapas\\App.Web\\Views",
+    "\\N-Capas\\NCapas\\App.Web\\Views\\Home",
+    "\\N-Capas\\NCapas\\App.Web\\Views\\Shared",
+    "\\N-Capas\\NCapas\\App.Web\\Views\\Sucursales"
+  ],
+  "SelectedNode": "\\N-Capas\\NCapas\\App.Web\\Views\\Sucursales\\AddOrEditBO.cshtml",
+  "PreviewInSolutionExplorer": false
+}
